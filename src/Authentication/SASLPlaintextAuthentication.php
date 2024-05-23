@@ -41,6 +41,5 @@ class SASLPlaintextAuthentication implements AuthenticationInterface
             'sasl.password',
             $this->configManager->get('auth.password')
         );
-        $this->conf->set('ssl.endpoint.identification.algorithm', '');
     }
 }
