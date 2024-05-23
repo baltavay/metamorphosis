@@ -12,7 +12,7 @@ class Factory
 
     private const TYPE_SASL_SSL = 'sasl_ssl';
 
-    private const TYPE_SASL_PLAINTEXT = 'sasl_plaintext';
+    private const TYPE_SASL_PLAINTEXT = 'SASL_PLAINTEXT';
 
     private const TYPE_NONE = 'none';
 
