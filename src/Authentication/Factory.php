@@ -12,6 +12,8 @@ class Factory
 
     private const TYPE_SASL_SSL = 'sasl_ssl';
 
+    private const TYPE_SASL_PLAINTEXT = 'sasl_plaintext';
+
     private const TYPE_NONE = 'none';
 
     public static function authenticate(Conf $conf, AbstractConfigManager $configManager): void
@@ -33,6 +35,13 @@ class Factory
             case self::TYPE_SASL_SSL:
                 app(
                     SASLAuthentication::class,
+                    compact('conf', 'configManager')
+                );
+
+                break;
+            case self::TYPE_SASL_PLAINTEXT:
+                app(
+                    SASLPlaintextAuthentication::class,
                     compact('conf', 'configManager')
                 );
 
